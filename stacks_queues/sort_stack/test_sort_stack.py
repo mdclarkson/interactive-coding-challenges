@@ -1,5 +1,5 @@
-from random import randint
 import unittest
+import secrets
 
 
 class TestSortStack(unittest.TestCase):
@@ -21,7 +21,7 @@ class TestSortStack(unittest.TestCase):
 
         print('Test: Two or more element stack (general case)')
         num_items = 10
-        numbers = [randint(0, 10) for x in range(num_items)]
+        numbers = [secrets.SystemRandom().randint(0, 10) for x in range(num_items)]
         sorted_stack = self.get_sorted_stack(stack, numbers)
         sorted_numbers = []
         for _ in range(num_items):
